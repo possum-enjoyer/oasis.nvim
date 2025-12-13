@@ -6,6 +6,9 @@
   "engines": {
     "vscode": "^1.107.0"
   },
+  "scripts": {
+    "build": "vsce package"
+  },
   "publisher": "uhs-robert",
   "icon": "icon.png",
   "categories": [
@@ -408,5 +411,8 @@
         "path": "./themes/light/5/oasis_twilight_light_5.json"
       }
     ]
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.7.1"
   }
 }
