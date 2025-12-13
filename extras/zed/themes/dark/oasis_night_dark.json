@@ -182,8 +182,7 @@
             "color": "#F58888"
           },
           "link_text": {
-            "color": "#FFA247",
-            "font_style": "underline"
+            "color": "#FFA247"
           },
           "link_uri": {
             "color": "#5ABAAE"

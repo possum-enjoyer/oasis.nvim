@@ -1,0 +1,412 @@
+{
+  "name": "oasis-colorscheme",
+  "displayName": "Oasis",
+  "description": "VSCcode port of the oasis.nvim colorscheme",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.107.0"
+  },
+  "publisher": "uhs-robert",
+  "icon": "icon.png",
+  "categories": [
+    "Themes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uhs-robert/oasis.nvim"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Oasis Abyss Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_abyss_dark.json"
+      },
+      {
+        "label": "Oasis Cactus Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_cactus_dark.json"
+      },
+      {
+        "label": "Oasis Canyon Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_canyon_dark.json"
+      },
+      {
+        "label": "Oasis Desert Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_desert_dark.json"
+      },
+      {
+        "label": "Oasis Dune Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_dune_dark.json"
+      },
+      {
+        "label": "Oasis Lagoon Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_lagoon_dark.json"
+      },
+      {
+        "label": "Oasis Midnight Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_midnight_dark.json"
+      },
+      {
+        "label": "Oasis Mirage Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_mirage_dark.json"
+      },
+      {
+        "label": "Oasis Night Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_night_dark.json"
+      },
+      {
+        "label": "Oasis Rose Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_rose_dark.json"
+      },
+      {
+        "label": "Oasis Sol Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_sol_dark.json"
+      },
+      {
+        "label": "Oasis Starlight Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_starlight_dark.json"
+      },
+      {
+        "label": "Oasis Twilight Dark",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/oasis_twilight_dark.json"
+      },
+      {
+        "label": "Oasis Abyss Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_abyss_light_1.json"
+      },
+      {
+        "label": "Oasis Cactus Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_cactus_light_1.json"
+      },
+      {
+        "label": "Oasis Canyon Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_canyon_light_1.json"
+      },
+      {
+        "label": "Oasis Desert Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_desert_light_1.json"
+      },
+      {
+        "label": "Oasis Dune Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_dune_light_1.json"
+      },
+      {
+        "label": "Oasis Lagoon Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_lagoon_light_1.json"
+      },
+      {
+        "label": "Oasis Midnight Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_midnight_light_1.json"
+      },
+      {
+        "label": "Oasis Mirage Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_mirage_light_1.json"
+      },
+      {
+        "label": "Oasis Night Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_night_light_1.json"
+      },
+      {
+        "label": "Oasis Rose Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_rose_light_1.json"
+      },
+      {
+        "label": "Oasis Sol Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_sol_light_1.json"
+      },
+      {
+        "label": "Oasis Starlight Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_starlight_light_1.json"
+      },
+      {
+        "label": "Oasis Twilight Light 1",
+        "uiTheme": "vs",
+        "path": "./themes/light/1/oasis_twilight_light_1.json"
+      },
+      {
+        "label": "Oasis Abyss Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_abyss_light_2.json"
+      },
+      {
+        "label": "Oasis Cactus Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_cactus_light_2.json"
+      },
+      {
+        "label": "Oasis Canyon Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_canyon_light_2.json"
+      },
+      {
+        "label": "Oasis Desert Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_desert_light_2.json"
+      },
+      {
+        "label": "Oasis Dune Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_dune_light_2.json"
+      },
+      {
+        "label": "Oasis Lagoon Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_lagoon_light_2.json"
+      },
+      {
+        "label": "Oasis Midnight Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_midnight_light_2.json"
+      },
+      {
+        "label": "Oasis Mirage Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_mirage_light_2.json"
+      },
+      {
+        "label": "Oasis Night Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_night_light_2.json"
+      },
+      {
+        "label": "Oasis Rose Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_rose_light_2.json"
+      },
+      {
+        "label": "Oasis Sol Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_sol_light_2.json"
+      },
+      {
+        "label": "Oasis Starlight Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_starlight_light_2.json"
+      },
+      {
+        "label": "Oasis Twilight Light 2",
+        "uiTheme": "vs",
+        "path": "./themes/light/2/oasis_twilight_light_2.json"
+      },
+      {
+        "label": "Oasis Abyss Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_abyss_light_3.json"
+      },
+      {
+        "label": "Oasis Cactus Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_cactus_light_3.json"
+      },
+      {
+        "label": "Oasis Canyon Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_canyon_light_3.json"
+      },
+      {
+        "label": "Oasis Desert Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_desert_light_3.json"
+      },
+      {
+        "label": "Oasis Dune Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_dune_light_3.json"
+      },
+      {
+        "label": "Oasis Lagoon Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_lagoon_light_3.json"
+      },
+      {
+        "label": "Oasis Midnight Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_midnight_light_3.json"
+      },
+      {
+        "label": "Oasis Mirage Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_mirage_light_3.json"
+      },
+      {
+        "label": "Oasis Night Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_night_light_3.json"
+      },
+      {
+        "label": "Oasis Rose Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_rose_light_3.json"
+      },
+      {
+        "label": "Oasis Sol Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_sol_light_3.json"
+      },
+      {
+        "label": "Oasis Starlight Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_starlight_light_3.json"
+      },
+      {
+        "label": "Oasis Twilight Light 3",
+        "uiTheme": "vs",
+        "path": "./themes/light/3/oasis_twilight_light_3.json"
+      },
+      {
+        "label": "Oasis Abyss Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_abyss_light_4.json"
+      },
+      {
+        "label": "Oasis Cactus Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_cactus_light_4.json"
+      },
+      {
+        "label": "Oasis Canyon Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_canyon_light_4.json"
+      },
+      {
+        "label": "Oasis Desert Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_desert_light_4.json"
+      },
+      {
+        "label": "Oasis Dune Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_dune_light_4.json"
+      },
+      {
+        "label": "Oasis Lagoon Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_lagoon_light_4.json"
+      },
+      {
+        "label": "Oasis Midnight Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_midnight_light_4.json"
+      },
+      {
+        "label": "Oasis Mirage Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_mirage_light_4.json"
+      },
+      {
+        "label": "Oasis Night Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_night_light_4.json"
+      },
+      {
+        "label": "Oasis Rose Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_rose_light_4.json"
+      },
+      {
+        "label": "Oasis Sol Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_sol_light_4.json"
+      },
+      {
+        "label": "Oasis Starlight Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_starlight_light_4.json"
+      },
+      {
+        "label": "Oasis Twilight Light 4",
+        "uiTheme": "vs",
+        "path": "./themes/light/4/oasis_twilight_light_4.json"
+      },
+      {
+        "label": "Oasis Abyss Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_abyss_light_5.json"
+      },
+      {
+        "label": "Oasis Cactus Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_cactus_light_5.json"
+      },
+      {
+        "label": "Oasis Canyon Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_canyon_light_5.json"
+      },
+      {
+        "label": "Oasis Desert Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_desert_light_5.json"
+      },
+      {
+        "label": "Oasis Dune Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_dune_light_5.json"
+      },
+      {
+        "label": "Oasis Lagoon Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_lagoon_light_5.json"
+      },
+      {
+        "label": "Oasis Midnight Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_midnight_light_5.json"
+      },
+      {
+        "label": "Oasis Mirage Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_mirage_light_5.json"
+      },
+      {
+        "label": "Oasis Night Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_night_light_5.json"
+      },
+      {
+        "label": "Oasis Rose Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_rose_light_5.json"
+      },
+      {
+        "label": "Oasis Sol Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_sol_light_5.json"
+      },
+      {
+        "label": "Oasis Starlight Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_starlight_light_5.json"
+      },
+      {
+        "label": "Oasis Twilight Light 5",
+        "uiTheme": "vs",
+        "path": "./themes/light/5/oasis_twilight_light_5.json"
+      }
+    ]
+  }
+}
