@@ -20,6 +20,9 @@ local function generate_vscode_theme(name, palette)
 		name = display_name,
 		type = is_light and "light" or "dark",
 		colors = {
+			["focusBorder"] = palette.syntax.comment,
+			["foreground"] = palette.fg.core,
+			["selection.background"] = palette.bg.surface,
 			-- ACTIVITY BAR
 			["activityBar.background"] = palette.bg.core,
 			["activityBar.foreground"] = palette.fg.core,
@@ -39,19 +42,29 @@ local function generate_vscode_theme(name, palette)
 			-- Button
 			["button.background"] = palette.bg.mantle,
 			["button.foreground"] = palette.fg.core,
-			["button.hoverBackground"] = "#495489",
+			["button.hoverBackground"] = hover_bg,
 			["button.secondaryBackground"] = palette.theme.primary,
-			["button.secondaryForeground"] = palette.theme.primary,
-			["button.secondaryHoverBackground"] = "#1f9e6f",
+			["button.secondaryForeground"] = palette.fg.dim,
+			["button.secondaryHoverBackground"] = hover_bg,
 			-- Checkbox
-			["checkbox.background"] = palette.theme.primary,
+			["checkbox.background"] = palette.bg.surface,
 			["checkbox.border"] = palette.bg.surface,
 			["checkbox.foreground"] = palette.fg.core,
+			-- DROPDOWN / QUICK PICKER
+			["dropdown.background"] = palette.bg.surface,
+			["dropdown.listBackground"] = palette.bg.mantle,
+			["dropdown.border"] = palette.bg.shadow,
+			["dropdown.foreground"] = palette.fg.core,
+			-- INPUT
+			["input.background"] = palette.bg.surface,
+			["input.border"] = palette.bg.shadow,
+			["input.foreground"] = palette.fg.core,
+			["input.placeholderForeground"] = palette.fg.dim,
 			-- Editor
 			["editor.background"] = palette.bg.core,
 			["editor.foreground"] = palette.fg.core,
 			["editor.selectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "40"),
-			["editor.inactiveSelectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "af"),
+			["editor.inactiveSelectionBackground"] = "",
 			["editor.selectionHighlightBackground"] = ColorUtils.with_alpha(palette.theme.accent, "30"),
 			["editor.findMatchBackground"] = ColorUtils.with_alpha(palette.ui.search.bg, "AA"),
 			["editor.findMatchHighlightBackground"] = ColorUtils.with_alpha(palette.ui.search.bg, "55"),
@@ -86,6 +99,31 @@ local function generate_vscode_theme(name, palette)
 			["editorGutter.addedBackground"] = palette.terminal.green,
 			["editorGutter.modifiedBackground"] = palette.terminal.yellow,
 			["editorGutter.deletedBackground"] = palette.terminal.red,
+			-- LIST
+			["list.activeSelectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
+			["list.activeSelectionForeground"] = palette.fg.core,
+			["list.inactiveSelectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "11"),
+			["list.hoverBackground"] = ColorUtils.with_alpha(palette.theme.primary, "11"),
+			["list.focusBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
+			-- MENU
+			["menu.background"] = palette.bg.surface,
+			["menu.foreground"] = palette.fg.core,
+			["menu.selectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "33"),
+			["menu.separatorBackground"] = palette.bg.shadow,
+			-- MERGE CONFLICTS
+			["merge.currentHeaderBackground"] = ColorUtils.with_alpha(palette.terminal.green, "33"),
+			["merge.currentContentBackground"] = ColorUtils.with_alpha(palette.terminal.green, "11"),
+			["merge.incomingHeaderBackground"] = ColorUtils.with_alpha(palette.terminal.blue, "33"),
+			["merge.incomingContentBackground"] = ColorUtils.with_alpha(palette.terminal.blue, "11"),
+			-- MINIMAP
+			["minimap.background"] = ColorUtils.with_alpha(palette.bg.core, "99"),
+			["minimap.selectionHighlight"] = ColorUtils.with_alpha(palette.theme.primary, "66"),
+			["minimap.errorHighlight"] = palette.ui.diag.error.fg,
+			["minimap.warningHighlight"] = palette.ui.diag.warn.fg,
+			-- MINIMAP GUTTER
+			["minimapGutter.addedBackground"] = palette.terminal.green,
+			["minimapGutter.modifiedBackground"] = palette.terminal.yellow,
+			["minimapGutter.deletedBackground"] = palette.terminal.red,
 			-- NOTIFICATIONS
 			["notifications.background"] = palette.bg.surface,
 			["notifications.foreground"] = palette.fg.core,
@@ -93,12 +131,33 @@ local function generate_vscode_theme(name, palette)
 			["notificationsErrorIcon.foreground"] = palette.ui.diag.error.fg,
 			["notificationsWarningIcon.foreground"] = palette.ui.diag.warn.fg,
 			["notificationsInfoIcon.foreground"] = palette.ui.diag.info.fg,
+			-- OUTLINE VIEW
+			["outline.foreground"] = palette.fg.core,
+			["outline.iconForeground"] = palette.theme.primary,
 			-- PANELS
 			["panel.background"] = palette.bg.mantle,
 			["panel.border"] = palette.bg.shadow,
 			["panelTitle.activeForeground"] = palette.fg.core,
 			["panelTitle.inactiveForeground"] = palette.fg.dim,
 			["panelTitle.activeBorder"] = palette.theme.primary,
+			-- PANEL SECTION
+			["panelSection.background"] = palette.bg.mantle,
+			["panelSection.border"] = palette.bg.shadow,
+			["panelSectionHeader.background"] = palette.bg.surface,
+			["panelSectionHeader.foreground"] = palette.fg.core,
+			["panelSectionHeader.border"] = palette.bg.shadow,
+			-- QUICK INPUT
+			["quickInput.background"] = palette.bg.surface,
+			["quickInput.foreground"] = palette.fg.core,
+			-- QUICK PANEL
+			["quickPicker.background"] = palette.bg.surface,
+			["quickPicker.foreground"] = palette.fg.core,
+			["quickPickerList.background"] = palette.bg.mantle,
+			["quickPickerList.focusBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
+			["quickPickerList.focusForeground"] = palette.fg.core,
+			["quickPickerList.focusIconForeground"] = palette.theme.primary,
+			-- PROGRESS BAR
+			["progressBar.background"] = palette.theme.primary,
 			-- SCROLLBARS
 			["scrollbarSlider.background"] = ColorUtils.with_alpha(palette.fg.dim, "44"),
 			["scrollbarSlider.hoverBackground"] = ColorUtils.with_alpha(palette.fg.dim, "66"),
@@ -143,90 +202,20 @@ local function generate_vscode_theme(name, palette)
 			["terminal.ansiBrightMagenta"] = palette.terminal.bright_magenta,
 			["terminal.ansiBrightCyan"] = palette.terminal.bright_cyan,
 			["terminal.ansiBrightWhite"] = palette.terminal.bright_white,
+			-- TIMELINE VIEW
+			["timeline.background"] = palette.bg.mantle,
+			["timeline.foreground"] = palette.fg.core,
 			-- TITLE BAR
 			["titleBar.activeBackground"] = palette.bg.mantle,
 			["titleBar.activeForeground"] = palette.fg.core,
 			["titleBar.inactiveBackground"] = palette.bg.shadow,
 			["titleBar.inactiveForeground"] = palette.fg.dim,
-
-			-- DROPDOWN / QUICK PICKER
-			["dropdown.background"] = palette.bg.surface,
-			["dropdown.listBackground"] = palette.bg.mantle,
-			["dropdown.border"] = palette.bg.shadow,
-			["dropdown.foreground"] = palette.fg.core,
-
-			-- INPUT CONTROL
-			["input.background"] = palette.bg.surface,
-			["input.border"] = palette.bg.shadow,
-			["input.foreground"] = palette.fg.core,
-			["input.placeholderForeground"] = palette.fg.dim,
-
-			-- MENU
-			["menu.background"] = palette.bg.surface,
-			["menu.foreground"] = palette.fg.core,
-			["menu.selectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "33"),
-			["menu.separatorBackground"] = palette.bg.shadow,
-
-			-- MINIMAP
-			["minimap.background"] = ColorUtils.with_alpha(palette.bg.core, "99"),
-			["minimap.selectionHighlight"] = ColorUtils.with_alpha(palette.theme.primary, "66"),
-			["minimap.errorHighlight"] = palette.ui.diag.error.fg,
-			["minimap.warningHighlight"] = palette.ui.diag.warn.fg,
-
-			-- PROGRESS BAR
-			["progressBar.background"] = palette.theme.primary,
-
-			-- QUICK INPUT
-			["quickInput.background"] = palette.bg.surface,
-			["quickInput.foreground"] = palette.fg.core,
-
-			-- WELCOME PAGE
-			["welcomePage.buttonBackground"] = palette.bg.mantle,
-			["welcomePage.buttonHoverBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
-			-- QUICK PANEL (Command Palette)
-			["quickPicker.background"] = palette.bg.surface,
-			["quickPicker.foreground"] = palette.fg.core,
-			["quickPickerList.background"] = palette.bg.mantle,
-			["quickPickerList.focusBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
-			["quickPickerList.focusForeground"] = palette.fg.core,
-			["quickPickerList.focusIconForeground"] = palette.theme.primary,
-
-			-- PANEL VIEWS (Outline, Timeline, etc.)
-			["panelSection.background"] = palette.bg.mantle,
-			["panelSection.border"] = palette.bg.shadow,
-			["panelSectionHeader.background"] = palette.bg.surface,
-			["panelSectionHeader.foreground"] = palette.fg.core,
-			["panelSectionHeader.border"] = palette.bg.shadow,
-
-			-- OUTLINE VIEW
-			["outline.foreground"] = palette.fg.core,
-			["outline.iconForeground"] = palette.theme.primary,
-
-			-- TIMELINE VIEW
-			["timeline.background"] = palette.bg.mantle,
-			["timeline.foreground"] = palette.fg.core,
-
-			-- EXPLORER/SIDEBAR VIEWS
-			["list.activeSelectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
-			["list.activeSelectionForeground"] = palette.fg.core,
-			["list.inactiveSelectionBackground"] = ColorUtils.with_alpha(palette.theme.primary, "11"),
-			["list.hoverBackground"] = ColorUtils.with_alpha(palette.theme.primary, "11"),
-			["list.focusBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
-
 			-- VIEW SPECIFIC COLORS
 			["sideBar.dropBackground"] = ColorUtils.with_alpha(palette.theme.primary, "33"),
 			["list.highlightForeground"] = palette.theme.primary,
-
-			-- MINIMAP GUTTER COLORS
-			["minimapGutter.addedBackground"] = palette.terminal.green,
-			["minimapGutter.modifiedBackground"] = palette.terminal.yellow,
-			["minimapGutter.deletedBackground"] = palette.terminal.red,
-
-			-- MERGE CONFLICTS
-			["merge.currentHeaderBackground"] = ColorUtils.with_alpha(palette.terminal.green, "33"),
-			["merge.currentContentBackground"] = ColorUtils.with_alpha(palette.terminal.green, "11"),
-			["merge.incomingHeaderBackground"] = ColorUtils.with_alpha(palette.terminal.blue, "33"),
-			["merge.incomingContentBackground"] = ColorUtils.with_alpha(palette.terminal.blue, "11"),
+			-- WELCOME PAGE
+			["welcomePage.buttonBackground"] = palette.bg.mantle,
+			["welcomePage.buttonHoverBackground"] = ColorUtils.with_alpha(palette.theme.primary, "22"),
 		},
 		semanticHighlighting = true,
 		semanticTokenColors = {
