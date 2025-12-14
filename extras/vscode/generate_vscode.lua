@@ -28,10 +28,12 @@ local function generate_vscode_theme(name, palette)
 			["activityBar.foreground"] = palette.fg.core,
 			["activityBar.border"] = ColorUtils.with_alpha(palette.bg.surface, '14'),
 			["activityBar.inactiveForeground"] = palette.fg.dim,
-			["activityBarBadge.background"] = palette.theme.primary,
+			["activityBarBadge.background"] = is_light and ColorUtils.adjust_brightness(palette.theme.primary, 2) or
+			ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
 			["activityBarBadge.foreground"] = palette.fg.core,
 			-- Badge
-			["badge.background"] = palette.theme.primary,
+			["badge.background"] = is_light and ColorUtils.adjust_brightness(palette.theme.primary, 2) or
+			ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
 			["badge.foreground"] = palette.fg.core,
 			-- Breadcrumb
 			["breadcrumb.activeSelectionForeground"] = palette.theme.primary,
@@ -40,11 +42,12 @@ local function generate_vscode_theme(name, palette)
 			["breadcrumb.foreground"] = ColorUtils.with_alpha(palette.fg.core, "40"),
 			["breadcrumbPicker.background"] = palette.bg.shadow,
 			-- Button
-			["button.background"] = palette.bg.mantle,
+			["button.background"] = is_light and ColorUtils.adjust_brightness(palette.theme.primary, 2) or
+			ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
 			["button.foreground"] = palette.fg.core,
 			["button.hoverBackground"] = hover_bg,
-			["button.secondaryBackground"] = palette.theme.primary,
-			["button.secondaryForeground"] = palette.fg.dim,
+			["button.secondaryBackground"] = palette.bg.mantle,
+			["button.secondaryForeground"] = palette.fg.core,
 			["button.secondaryHoverBackground"] = hover_bg,
 			-- Checkbox
 			["checkbox.background"] = palette.bg.surface,
