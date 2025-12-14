@@ -29,11 +29,11 @@ local function generate_vscode_theme(name, palette)
 			["activityBar.border"] = ColorUtils.with_alpha(palette.bg.surface, '14'),
 			["activityBar.inactiveForeground"] = palette.fg.dim,
 			["activityBarBadge.background"] = is_light and ColorUtils.adjust_brightness(palette.theme.primary, 2) or
-			ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
+				ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
 			["activityBarBadge.foreground"] = palette.fg.core,
 			-- Badge
 			["badge.background"] = is_light and ColorUtils.adjust_brightness(palette.theme.primary, 2) or
-			ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
+				ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
 			["badge.foreground"] = palette.fg.core,
 			-- Breadcrumb
 			["breadcrumb.activeSelectionForeground"] = palette.theme.primary,
@@ -43,7 +43,7 @@ local function generate_vscode_theme(name, palette)
 			["breadcrumbPicker.background"] = palette.bg.shadow,
 			-- Button
 			["button.background"] = is_light and ColorUtils.adjust_brightness(palette.theme.primary, 2) or
-			ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
+				ColorUtils.adjust_brightness(palette.theme.primary, 0.8),
 			["button.foreground"] = palette.fg.core,
 			["button.hoverBackground"] = hover_bg,
 			["button.secondaryBackground"] = palette.bg.mantle,
@@ -394,21 +394,16 @@ local function generate_vscode_theme(name, palette)
 			},
 			{
 				name = "Parentheses, Brackets, Braces",
-				scope = "punctuation",
-				settings = {
-					foreground = palette.syntax.punctuation,
-				}
-			},
-			{
-				name = "Parentheses, Brackets, Braces",
 				scope = {
+					"punctuation",
 					"punctuation.accessor",
 					"punctuation.definition.generic",
 					"meta.function.closure punctuation.section.parameters",
 					"punctuation.definition.tag",
-					"punctuation.separator.key-value" },
+					"punctuation.separator.key-value"
+				},
 				settings = {
-					foreground = palette.fg.dim,
+					foreground = palette.syntax.punctuation,
 				}
 			},
 			{
