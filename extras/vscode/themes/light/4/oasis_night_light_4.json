@@ -421,14 +421,8 @@
     },
     {
       "name": "Parentheses, Brackets, Braces",
-      "scope": "punctuation",
-      "settings": {
-        "foreground": "#932427"
-      }
-    },
-    {
-      "name": "Parentheses, Brackets, Braces",
       "scope": [
+        "punctuation",
         "punctuation.accessor",
         "punctuation.definition.generic",
         "meta.function.closure punctuation.section.parameters",
@@ -436,7 +430,7 @@
         "punctuation.separator.key-value"
       ],
       "settings": {
-        "foreground": "#7a7a7a"
+        "foreground": "#932427"
       }
     },
     {
